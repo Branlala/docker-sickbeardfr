@@ -6,7 +6,7 @@ ENV SICKBEARD_VERSION master
 RUN apt-get -q update &&\
     apt-get install -qy --force-yes python-cheetah && \
     #curl -L https://gitlab.com/sarakha63/Sick-Beard/repository/archive.tar.gz?ref=development -o sickbeard.tgz && \
-    curl -L https://git.aldanet.fr/rcharrat/Sick-Beard.FR/repository/archive.zip?ref=development && \
+    curl -L https://git.aldanet.fr/rcharrat/Sick-Beard.FR/repository/archive.zip?ref=development -o sickbeard.tgz && \
     tar -xvf sickbeard.tgz -C /  &&\
     mv /Sick-Beard-development-* /sickbeard/ &&\
     rm  /sickbeard.tgz && \
