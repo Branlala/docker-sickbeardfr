@@ -11,8 +11,8 @@ RUN apt-get -q update &&\
     rm -rf /tmp/*
 
 ADD sickbeard.tgz sickbeard.tgz
-RUN tar -xvf sickbeard.tgz -C /
-RUN mv /Sick-Beard-development-* /sickbeard/
+RUN tar xvf sickbeard.tgz
+RUN mv Sick-Beard-development-* /sickbeard/
 RUN rm  /sickbeard.tgz
 
 VOLUME ["/config","/data"]
