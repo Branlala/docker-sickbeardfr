@@ -10,10 +10,10 @@ RUN apt-get -q update &&\
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /tmp/*
 
-ADD sickbeard.tgz sickbeard.tgz
-RUN tar xvf sickbeard.tgz
-RUN mv Sick-Beard-development-* /sickbeard/
-RUN rm  /sickbeard.tgz
+ADD sickbeard /sickbeard
+#RUN tar -xvf sickbeard.tgz
+#RUN mv sickbeard.tgz/Sick-Beard-development-* /sickbeard/
+#RUN rm  /sickbeard.tgz
 
 VOLUME ["/config","/data"]
 
